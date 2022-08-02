@@ -1,9 +1,8 @@
-use anyhow::anyhow;
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Default, Clone, Serialize, Deserialize)]
 pub struct Versions{
-    pub version: u32,
+    pub version: String,
     pub link: String
 }
 impl  Versions {

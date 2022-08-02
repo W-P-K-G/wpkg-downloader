@@ -2,6 +2,7 @@
 mod utils;
 mod versions;
 mod updater;
+mod globals;
 
 #[tokio::main]
 async fn main() {
