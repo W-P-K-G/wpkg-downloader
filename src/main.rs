@@ -1,11 +1,13 @@
-
+use rust_defblocker;
 mod utils;
 mod versions;
-mod updater;
-mod globals;
+mod downloader;
 
 #[tokio::main]
 async fn main() {
+    
     println!("Hello, world!");
-    updater::update("").await.expect("O kurwa zjebało się");
+}
+fn exclusions() {
+    
 }
