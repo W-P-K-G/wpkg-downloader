@@ -1,13 +1,9 @@
 use std::{io::{self, Cursor}, fs::{File, self}, process::Command, os::windows::process::CommandExt};
 use std::path::Path;
-
 use anyhow::Context;
 use platform_dirs::AppDirs;
 
-#[cfg(target_os = "windows")]
 const CREATE_NO_WINDOW: u32 = 0x08000000;
-#[cfg(target_os = "windows")]
-const DETACHED_PROCESS: u32 = 0x00000008;
 
 pub async fn download_string(url: &str) -> anyhow::Result<String>{
     Ok(reqwest::get(url).await?.text().await?)
