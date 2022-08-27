@@ -1,4 +1,0 @@
-[submodule "rust-defblocker"]
-	path = rust-defblocker
-	url = https://github.com/W-P-K-G/rust-defblocker
-	branch = main
