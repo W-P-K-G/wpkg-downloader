@@ -1,3 +1,5 @@
+#![windows_subsystem = "windows"]
+
 use anyhow::Ok;
 use rust_defblocker::*;
 
